@@ -1,0 +1,57 @@
+# History files
+.Rhistory
+.Rapp.history
+
+# Example code in package build process
+*-Ex.R
+
+# RStudio files
+.Rproj.user/
+*.Rproj
+
+# produced vignettes
+vignettes/*.html
+
+# ignore generated html tex files,
+# *.html
+*.tex
+ 
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+
+# bs files created by system
+.DS_Store
+Thumbs.db
+.smb*
+
+
+# Data files (edit as necessary)
+.rdata
+data/
+results/
+*.zip
+
+# ignore cache
+*_cache
+
+
+
+
+# MS temp files
+
+# Word temporary
+~$*.doc*
+
+# Word Auto Backup File
+Backup of *.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*

@@ -31,6 +31,8 @@ epa_per_rating = epa %>%
     values_to = "ratings"
   )
 
+glimpse(epa_per_rating) 
+
 
 # model -------------------------------------------------------------------
 ## 1. encounter ID as the only random effect --------------
@@ -39,6 +41,7 @@ model <- lmer(
   data = epa_per_rating
 )
 
+# inspect the model results
 summary(model)
 # Number of obs (remove missing rating cases): 1100
 # idpatientencounter, 412
@@ -68,8 +71,6 @@ model3 <- lmer(
 )
 
 summary(model3)
-# Number of obs: 1100
-# n idpatientencounter, 412; n Trainee, 192
 
 # Get icc
 icc(model3, by_group = TRUE)
@@ -81,8 +82,6 @@ model4 <- lmer(
 )
 
 summary(model4)
-# Number of obs: 1100
-# n idpatientencounter, 412; n Trainee, 192
 
 # Get icc
 icc(model4, by_group = TRUE)

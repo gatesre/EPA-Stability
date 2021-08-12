@@ -1,41 +1,25 @@
-repo-template
+# EPA Stability
 
-This repo is a starting point for uniformity among project repos.  Just clone it and create an RStudio project from the now-existing folder and you're off.  You also need to create a `data` folder at the top level to go with others seen here, but note that it is already added to .gitignore, so its contents should never appear on GitHub.
-
-Consult the `other_docs/style_suggestions.Rmd`  before getting too carried away.
-
-## Readme Page tempate
-
-For this main page, add project description, and documents and links. Below is a template structure.
-
+Stability of surgical resident entrustability assessments across multiple phases of care
 
 # Project Name
 
 ## Summary
 
-project goals, main research questions, etc. 
+This project already has a published abstract 3 years ago. Now, we are revisiting the manuscript and aim to publish a manuscript based on the abstract.
+
+Abstract
+
+> The American Board of Surgery (ABS) Entrustable Professional Activities (EPAs) pilot study asks faculty to rate the entrustability of surgical trainees across multiple phases of care for a single disease process. It is unknown if faculty do assess trainees in each of those phases and, when they do, if additional information is gleaned. This study aims to address those questions.
+
+To what degree the 3-phase ratings for the same case contribute any variance to the rating outcomes.
 
 ## Data Sources
 
-dataset names, brief description of each dataset, main variable used
-
-## Cohort definitions
-
-Cohort definition diagram
+EPA data collected from SIMPL.
 
 ## Labnotebook
 
-list each important document generated and used in the analyses process, including QA, descriptive analyses, explore interactions, etc. Follow the style like
-
-1. Initial cohort definition
-
-First attempt to define cohort. This document included the explanation of the basics of cohort criteria.
-
-`[define_cohort](code/data_prep/1_define_cohort.pdf)`
-
-## Other
-
-Other notes to research team and future self. 
 
 
 

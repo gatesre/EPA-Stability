@@ -1,0 +1,49 @@
+#Load dplyr
+library(dplyr)
+
+#Descriptive statistics
+#Means 
+summarize(EPA, mean_Preop_rating=mean(Preop, na.rm = T))
+summarize(EPA, mean_Intraop_rating=mean(Intraop, na.rm = T))
+summarize(EPA, mean_Postop_rating=mean(Postop, na.rm = T))
+
+#Number of evaluations of each PGY level
+group_by(EPA, idpgy) %>%
+summarize(Count=n())
+
+#Pearson correlations
+cor.test(EPA$Preop, EPA$Intraop)
+cor.test(EPA$Preop, EPA$Postop)
+cor.test(EPA$Intraop, EPA$Postop)
+
+#Making graphs
+library(ggplot2)
+plot(EPA$Preop, EPA$Intraop, 
+     col="blue",
+     xlab="Preoperative Rating",
+     ylab="Intraoperative Rating",
+     main="Pre- vs. Intra-operative Ratings")
+#Add regression line
+abline(lm(EPA$Intraop ~ EPA$Preop), col="green")
+#Add Pearson correlation
+text(paste("Correlation: 0.75"), x=1.8, y=4.5)
+
+plot(EPA$Preop, EPA$Postop, 
+     col="blue",
+     xlab="Preoperative Rating",
+     ylab="Postoperative Rating",
+     main="Pre- vs. Post-operative Ratings")
+#Add regression line
+abline(lm(EPA$Postop ~ EPA$Preop), col="green")
+#Add Pearson correlation
+text(paste("Correlation: 0.84"), x=1.8, y=4.5)
+
+plot(EPA$Intraop, EPA$Postop, 
+     col="blue",
+     xlab="Intraoperative Rating",
+     ylab="Postoperative Rating",
+     main="Intra- vs. Post-operative Ratings")
+#Add regression line
+abline(lm(EPA$Postop ~ EPA$Intraop), col="green")
+#Add Pearson correlation
+text(paste("Correlation: 0.79"), x=1.8, y=4.5)
